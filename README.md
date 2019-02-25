@@ -1,3 +1,3 @@
 # MacResetter
-Java resetter for macOS Sierra, macOSX & macOS mojave
+System resetter for macOS Sierra, macOSX & macOS mojave written in java
 
